@@ -2,8 +2,8 @@ package com.example.studentlist
 
 import android.os.Bundle
 import android.widget.Button
+import android.widget.CheckBox
 import android.widget.EditText
-import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -12,9 +12,12 @@ import androidx.core.view.WindowInsetsCompat
 class AddStudentActivity : AppCompatActivity() {
     var nameTextField: EditText? = null
     var idTextField: EditText? = null
-    var massegeTextView: TextView? = null
     var saveButton: Button? = null
     var cancelButton: Button? = null
+    var phoneTextField: EditText? = null
+    var addressTextField: EditText? = null
+    var checkedBox: CheckBox? = null
+
 
 
 
@@ -32,9 +35,11 @@ class AddStudentActivity : AppCompatActivity() {
     private fun setupUI(){
         nameTextField = findViewById(R.id.editName)
         idTextField = findViewById(R.id.editID)
-        massegeTextView = findViewById(R.id.massageSave)
         saveButton = findViewById(R.id.saveButton)
         cancelButton = findViewById(R.id.cancelButton)
+        phoneTextField = findViewById(R.id.editPhone)
+        addressTextField = findViewById(R.id.editAddress)
+        checkedBox = findViewById(R.id.checkedBox)
 
         cancelButton?.setOnClickListener{
             finish()
@@ -42,7 +47,13 @@ class AddStudentActivity : AppCompatActivity() {
 
         saveButton?.setOnClickListener{
             val name = nameTextField?.text.toString()
-            massegeTextView?.text = name + " saved"
+            val id = idTextField?.text.toString()
+            val phone = phoneTextField?.text.toString()
+            val address = addressTextField?.text.toString()
+            val checked = checkedBox?.isChecked ?: false
+            val student = StudentModel(name, id, phone, address, checked)
+            StudentListHolder.addStudent(student)
+            finish()
         }
 
     }

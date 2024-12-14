@@ -8,6 +8,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import android.content.Intent
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -21,13 +23,13 @@ class MainActivity : AppCompatActivity() {
         }
 
         val addStudentButton: Button = findViewById(R.id.button_addStudent)
+        addStudentButton.setOnClickListener {
+            val intent = Intent(this, AddStudentActivity::class.java)
+            startActivity(intent)
+        }
 
-
-        addStudentButton.setOnClickListener(::onAddStudentButtonClick)
-    }
-
-    fun onAddStudentButtonClick(view: View) {
-        val intent = Intent(this, AddStudentActivity::class.java)
-        startActivity(intent)
+        val studentList:RecyclerView = findViewById(R.id.studentList)
+        studentList.layoutManager = LinearLayoutManager(this)
+        studentList.adapter = StudentAdapter(StudentListHolder.getStudentList())
     }
 }

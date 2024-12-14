@@ -1,4 +1,4 @@
 <resources>
     <string name="app_name">Student List</string>
-    <string name="add_student">ADD STUDENT</string>
+    <string name="add_student">+</string>
 </resources>
