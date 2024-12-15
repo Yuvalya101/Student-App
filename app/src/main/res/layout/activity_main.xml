@@ -12,7 +12,7 @@
         android:id="@+id/textView"
         android:layout_width="409dp"
         android:layout_height="69dp"
-        android:text="Srudent List:"
+        android:text="Student List:"
         android:textAlignment="viewStart"
         android:textColor="#174E54"
         android:textSize="40sp"

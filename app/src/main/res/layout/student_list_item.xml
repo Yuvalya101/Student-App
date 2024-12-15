@@ -7,8 +7,8 @@
 
     <ImageView
         android:id="@+id/imageStudentView"
-        android:layout_width="128dp"
-        android:layout_height="128dp"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -22,7 +22,7 @@
         android:layout_marginStart="12dp"
         android:layout_marginTop="16dp"
         android:text="student name"
-        android:textSize="30sp"
+        android:textSize="24sp"
         app:layout_constraintEnd_toStartOf="@+id/checkedBoxView"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/imageStudentView"
@@ -35,7 +35,7 @@
         android:layout_marginStart="12dp"
         android:layout_marginTop="16dp"
         android:text="id student"
-        android:textSize="30sp"
+        android:textSize="20sp"
         app:layout_constraintEnd_toStartOf="@+id/checkedBoxView"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/imageStudentView"
