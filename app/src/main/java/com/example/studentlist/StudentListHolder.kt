@@ -9,8 +9,8 @@ object StudentListHolder {
         studentList.add(student)
     }
 
-    fun removeStudent(student: StudentModel) {
-        studentList.remove(student)
+    fun deleteStudent(index: Int) {
+        studentList.removeAt(index)
     }
 
     fun getStudentList(): List<StudentModel> {

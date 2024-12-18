@@ -34,12 +34,12 @@ class AddStudentActivity : AppCompatActivity() {
         setupUI()
     }
     private fun setupUI(){
-        nameTextField = findViewById(R.id.editName)
-        idTextField = findViewById(R.id.editID)
+        nameTextField = findViewById(R.id.addName)
+        idTextField = findViewById(R.id.addID)
         saveButton = findViewById(R.id.saveButton)
         cancelButton = findViewById(R.id.cancelButton)
-        phoneTextField = findViewById(R.id.editPhone)
-        addressTextField = findViewById(R.id.editAddress)
+        phoneTextField = findViewById(R.id.addPhone)
+        addressTextField = findViewById(R.id.addAddress)
         checkedBox = findViewById(R.id.checkedBox)
 
         cancelButton?.setOnClickListener{
@@ -55,8 +55,6 @@ class AddStudentActivity : AppCompatActivity() {
             val student = StudentModel(name, id, phone, address, checked)
             Log.d("AddStudentActivity", "Created student: $student")
             StudentListHolder.addStudent(student)
-
-
             finish()
         }
 

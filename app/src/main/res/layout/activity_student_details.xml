@@ -33,7 +33,7 @@
             app:layout_constraintTop_toBottomOf="@+id/idStudent" />
 
         <TextView
-            android:id="@+id/addressStudent"
+            android:id="@+id/editStudent"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
@@ -123,9 +123,9 @@
             android:layout_marginEnd="8dp"
             android:text="TextView"
             android:textSize="20sp"
-            app:layout_constraintBaseline_toBaselineOf="@+id/addressStudent"
+            app:layout_constraintBaseline_toBaselineOf="@+id/editStudent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/addressStudent" />
+            app:layout_constraintStart_toEndOf="@+id/editStudent" />
 
         <Button
             android:id="@+id/editButton"
@@ -162,7 +162,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.089"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/addressStudent" />
+            app:layout_constraintTop_toBottomOf="@+id/editStudent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
