@@ -1,5 +1,6 @@
 package com.example.studentlist
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -30,6 +31,11 @@ class StudentAdapter(val studentList: List<StudentModel>):
         holder.nameStudentView.text = currentItem.name
         holder.idStudentView.text = currentItem.id
         holder.checkedBoxView.isChecked = currentItem.checked
+        holder.itemView.setOnClickListener {
+            val intent = Intent(it.context,StudentDetails::class.java)
+            intent.putExtra("studentPosition",position)
+            holder.itemView.context.startActivity(intent)
+        }
         holder.checkedBoxView.setOnClickListener{
             StudentListHolder.editStudent(currentItem.copy(checked = holder.checkedBoxView.isChecked), position)
             notifyItemChanged(position)

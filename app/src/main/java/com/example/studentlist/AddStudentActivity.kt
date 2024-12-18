@@ -1,6 +1,7 @@
 package com.example.studentlist
 
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 import android.widget.CheckBox
 import android.widget.EditText
@@ -52,7 +53,10 @@ class AddStudentActivity : AppCompatActivity() {
             val address = addressTextField?.text.toString()
             val checked = checkedBox?.isChecked ?: false
             val student = StudentModel(name, id, phone, address, checked)
+            Log.d("AddStudentActivity", "Created student: $student")
             StudentListHolder.addStudent(student)
+
+
             finish()
         }
 
